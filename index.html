@@ -44,7 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:cent
 /* HERO */
 header.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:96px 0 40px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;width:100%}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}.scroll-hint{display:none}}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:2px;border:2px solid var(--ink);padding:6px 13px;background:var(--paper)}
 .hero-tag .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);animation:blink 1.6s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
