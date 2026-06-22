@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seoyeong Hwang — AI Engineer / Researcher</title>
+<meta name="description" content="Seoyeong (Katrina) Hwang — AI Engineer & Researcher. Geometric deep learning, spatio-temporal GNNs, LLM agents, and AI for Science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Bayer Universal';font-style:normal;font-weight:400;font-display:swap;
+src:url(data:font/woff2;base64,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) format('woff2');}
+:root{
+  --paper:#f3efe4;--ink:#16140f;--red:#d6422b;--blue:#2256a8;--yellow:#f0b429;
+  --grid:rgba(22,20,15,.07);--maxw:1280px;
+  --display:'Bayer Universal','Jost',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--yellow);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(243,239,228,.88);backdrop-filter:blur(8px);border-bottom:3px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:20px;letter-spacing:.04em}
+.brand .mark{height:24px;width:auto;display:inline-block}
+.navlinks{display:flex;gap:24px;font-weight:600;font-size:14px;text-transform:lowercase;letter-spacing:.5px}
+.navlinks a{position:relative;padding:4px 0}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:3px;background:var(--red);transition:width .25s}
+.navlinks a:hover::after{width:100%}
+.nav-toggle{display:none;font-family:var(--display);font-size:22px;background:none;border:none;cursor:pointer}
+@media(max-width:820px){
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:3px solid var(--ink)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:16px 28px;border-top:1px solid var(--grid)}
+  .nav-toggle{display:block}
+}
+
+/* HERO */
+header.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:96px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;width:100%}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Jost';font-size:12px;text-transform:uppercase;letter-spacing:2px;border:2px solid var(--ink);padding:6px 13px;background:var(--paper)}
+.hero-tag .dot{width:9px;height:9px;border-radius:50%;background:var(--red);animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+h1.hero-title{font-family:var(--display);font-size:clamp(52px,8.5vw,118px);line-height:.94;letter-spacing:.05em;margin:22px 0 18px;text-transform:lowercase}
+h1.hero-title .l2{color:var(--red)}
+.hero-sub{max-width:520px;font-size:clamp(15px,1.7vw,19px);font-weight:500}
+.hero-sub b{background:var(--yellow);padding:0 4px}
+.hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{font-family:var(--display);font-weight:400;font-size:17px;text-transform:lowercase;letter-spacing:.12em;padding:14px 26px;border:3px solid var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s;display:inline-flex;align-items:center;gap:9px}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--red)}
+.btn-ghost:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--blue)}
+.hero-card{position:relative;border:4px solid var(--ink);background:var(--paper);height:430px;box-shadow:12px 12px 0 rgba(22,20,15,.12);overflow:hidden}
+@media(max-width:900px){.hero-card{height:330px}}
+.hero-card canvas{display:block;width:100%;height:100%}
+.hero-card .cap{position:absolute;left:0;bottom:0;font-family:'Jost';font-size:11px;letter-spacing:1px;color:var(--ink);background:var(--yellow);padding:4px 9px;border-top:3px solid var(--ink);border-right:3px solid var(--ink)}
+.glance{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.glance span{font-family:'Jost';font-size:12px;border:2px solid var(--ink);padding:6px 11px;background:var(--paper)}
+.glance b{color:var(--red)}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;font-family:'Jost';font-size:11px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.65}
+.scroll-hint .bar{width:2px;height:30px;background:var(--ink);animation:slide 1.8s infinite}
+@keyframes slide{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* SECTION */
+section{position:relative;z-index:1;padding:90px 0}
+.sec-head{display:flex;align-items:flex-end;gap:20px;margin-bottom:44px;flex-wrap:wrap}
+.sec-num{font-family:'Jost';font-size:15px;font-weight:700;color:var(--red);border:2px solid var(--ink);width:46px;height:46px;display:flex;align-items:center;justify-content:center;flex:none}
+.sec-title{font-family:var(--display);font-size:clamp(30px,5vw,56px);line-height:1;text-transform:lowercase;letter-spacing:.04em}
+.sec-line{flex:1;height:3px;background:var(--ink);min-width:40px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.45fr 1fr;border:3px solid var(--ink)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-text{padding:36px;border-right:3px solid var(--ink)}
+@media(max-width:860px){.about-text{border-right:none;border-bottom:3px solid var(--ink)}}
+.about-text .lead{font-size:21px;font-weight:600;margin-bottom:16px}
+.about-text p{font-size:16px;margin-bottom:14px}
+.about-text .ri{font-family:'Jost';font-size:12.5px;line-height:1.9;color:var(--ink)}
+.about-stats{display:grid;grid-template-rows:repeat(3,1fr)}
+.stat{padding:24px 34px;border-bottom:3px solid var(--ink);display:flex;flex-direction:column;gap:3px}
+.stat:last-child{border-bottom:none}
+.stat:nth-child(1){background:var(--red);color:var(--paper)}
+.stat:nth-child(2){background:var(--blue);color:var(--paper)}
+.stat:nth-child(3){background:var(--yellow)}
+.stat .n{font-family:var(--display);font-size:44px;line-height:1;letter-spacing:.03em}
+.stat .l{font-family:'Jost';font-size:11px;text-transform:uppercase;letter-spacing:1.2px}
+
+/* PAPERS */
+.papers{display:flex;flex-direction:column;border-top:3px solid var(--ink)}
+.paper{display:grid;grid-template-columns:84px 1fr auto;gap:22px;align-items:center;padding:24px 8px;border-bottom:3px solid var(--ink);transition:background .2s,padding-left .2s;cursor:pointer}
+.paper:hover{background:var(--ink);color:var(--paper);padding-left:20px}
+.paper:hover .p-venue{border-color:var(--paper)}
+.paper:hover .p-arrow{transform:translateX(6px)}
+.p-year{font-family:'Jost';font-weight:700;font-size:14px}
+.p-title{font-family:'Jost';font-weight:700;font-size:clamp(16px,2vw,22px);line-height:1.18;margin-bottom:8px}
+.p-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.p-venue{font-family:'Jost';font-size:11px;text-transform:uppercase;letter-spacing:.6px;border:2px solid currentColor;padding:3px 8px}
+.p-authors{font-size:12.5px;opacity:.82}
+.p-arrow{font-family:var(--display);font-size:22px;transition:transform .2s}
+@media(max-width:640px){.paper{grid-template-columns:54px 1fr;gap:12px}.p-arrow{display:none}}
+.patents{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:0;border:3px solid var(--ink)}
+@media(max-width:640px){.patents{grid-template-columns:1fr}}
+.patent{padding:22px 24px;border-right:3px solid var(--ink)}
+.patent:last-child{border-right:none}
+@media(max-width:640px){.patent{border-right:none;border-bottom:3px solid var(--ink)}.patent:last-child{border-bottom:none}}
+.patent .pt{font-weight:700;font-size:16px;margin-bottom:6px}
+.patent .pm{font-family:'Jost';font-size:11.5px;color:var(--ink);opacity:.75}
+
+/* VORONOI BAND */
+.vband{position:relative;border:3px solid var(--ink);height:150px;overflow:hidden;margin-bottom:44px;background:var(--ink)}
+.vband canvas{display:block;width:100%;height:100%}
+.vband .lbl{position:absolute;left:0;top:0;font-family:'Jost';font-size:11px;letter-spacing:1px;color:var(--ink);background:var(--yellow);padding:4px 9px;border-bottom:3px solid var(--ink);border-right:3px solid var(--ink)}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);border:3px solid var(--ink)}
+@media(max-width:980px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.proj-grid{grid-template-columns:1fr}}
+.proj{padding:28px;border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);min-height:310px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background .25s}
+.proj:hover{background:var(--ink);color:var(--paper)}
+.proj:hover .proj-shape{transform:scale(1.2) rotate(18deg)}
+.proj:hover .proj-tags span{border-color:var(--paper)}
+.proj-shape{position:absolute;top:-10px;right:-10px;width:64px;height:64px;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.proj-idx{font-family:'Jost';font-size:12px;font-weight:700;color:var(--red)}
+.proj h3{font-family:'Jost';font-weight:700;font-size:20px;line-height:1.12;margin:13px 0 6px;max-width:84%}
+.proj .org{font-family:'Jost';font-size:11px;letter-spacing:.4px;opacity:.7;margin-bottom:10px}
+.proj p{font-size:14px;flex:1}
+.proj .res{font-weight:700;color:var(--red);font-size:14px;margin-top:8px}
+.proj:hover .res{color:var(--yellow)}
+.proj-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.proj-tags span{font-family:'Jost';font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;border:2px solid currentColor;padding:3px 7px}
+
+/* EXPERIENCE */
+.exp{border-top:3px solid var(--ink)}
+.exp-row{display:grid;grid-template-columns:200px 1fr auto;gap:22px;align-items:baseline;padding:22px 8px;border-bottom:3px solid var(--ink);transition:padding-left .2s,background .2s}
+.exp-row:hover{padding-left:18px;background:rgba(214,66,43,.07)}
+.exp-co{font-family:'Jost';font-weight:700;font-size:17px}
+.exp-role{font-size:14.5px}
+.exp-role .tag{display:inline-block;font-family:'Jost';font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:2px solid var(--ink);padding:2px 7px;margin-right:8px;vertical-align:middle}
+.exp-date{font-family:'Jost';font-size:12px;opacity:.7;white-space:nowrap}
+@media(max-width:760px){.exp-row{grid-template-columns:1fr;gap:6px}.exp-date{order:3}}
+
+/* SKILLS */
+.stack-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.stack-wrap{grid-template-columns:repeat(2,1fr)}}
+.stack-col h4{font-family:'Jost';font-size:12px;text-transform:uppercase;letter-spacing:1.4px;padding-bottom:9px;margin-bottom:13px;border-bottom:3px solid var(--ink)}
+.chip{display:inline-block;font-weight:600;font-size:13.5px;border:2px solid var(--ink);padding:6px 11px;margin:0 6px 8px 0;background:var(--paper);transition:transform .15s,background .15s,color .15s}
+.chip:hover{transform:translateY(-3px)}
+.chip.r:hover{background:var(--red);color:var(--paper);border-color:var(--red)}
+.chip.b:hover{background:var(--blue);color:var(--paper);border-color:var(--blue)}
+.chip.y:hover{background:var(--yellow)}
+
+/* CONTACT */
+.contact{background:var(--ink);color:var(--paper);margin:0 -9999px;padding:90px 9999px}
+.contact .inner{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.contact h2{font-family:var(--display);font-size:clamp(34px,7vw,80px);line-height:.95;text-transform:lowercase;letter-spacing:.04em;margin-bottom:14px}
+.contact h2 em{font-style:normal;color:var(--yellow)}
+.contact .edu{font-family:'Jost';font-size:12.5px;opacity:.75;margin-bottom:28px}
+.contact .cite{font-family:'Jost';font-size:12px;opacity:.55;margin:2px 0 26px}
+.contact-links{display:flex;gap:13px;flex-wrap:wrap}
+.clink{font-family:var(--display);font-weight:400;text-transform:lowercase;letter-spacing:.05em;font-size:16px;border:3px solid var(--paper);padding:18px 30px;display:flex;flex-direction:column;align-items:center;gap:10px;transition:transform .15s,background .15s,color .15s}
+.clink svg{width:28px;height:28px;display:block}
+.clink:hover{transform:translate(-3px,-3px);background:var(--paper);color:var(--ink);box-shadow:6px 6px 0 var(--red)}
+footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'Jost';font-size:11.5px;letter-spacing:1px;text-transform:uppercase;border-top:3px solid var(--ink)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><svg class="mark" viewBox="0 0 100 32" aria-hidden="true"><path d="M3 15.4 A11 11 0 0 1 25 15.4 Z" fill="#16140f"/><circle cx="14" cy="22.2" r="6.8" fill="#d6422b"/><polygon points="38.6,29 60.6,29 49.6,9.95" fill="#f0b429"/><circle cx="85.2" cy="18" r="11" fill="#2256a8"/></svg>seoyeong hwang</a>
+  <button class="nav-toggle" aria-label="menu" onclick="document.getElementById('nav').classList.toggle('open')">≡</button>
+  <div class="navlinks" id="nav">
+    <a href="#about">about</a>
+    <a href="#research">research</a>
+    <a href="#projects">projects</a>
+    <a href="#experience">experience</a>
+    <a href="#contact">contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-tag"><span class="dot"></span>AI Engineer · Researcher · Seoul, KR</span>
+        <h1 class="hero-title"><span class="l1">seoyeong</span><br><span class="l2">hwang</span></h1>
+        <p class="hero-sub"><b>Geometric deep learning</b>, spatio-temporal modeling, and <b>AI for Science</b> — building models that represent the world as graphs and sequences, and shipping them as production systems.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">View work →</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <div class="glance">
+          <span><b>4</b> publications</span>
+          <span><b>2</b> patents</span>
+          <span><b>3</b> startup deployments</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <canvas id="gnnCard"></canvas>
+        <span class="cap">geometric deep learning · equivariant dynamics</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span class="bar"></span>Scroll</div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">01</span><h2 class="sec-title">About</h2><span class="sec-line"></span></div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p class="lead">Bridging physics, signals, and intelligence — building AI that understands and predicts complex real-world systems.</p>
+        <p>I'm a master's researcher in AI at Ewha Womans University, specializing in geometric deep learning, spatio-temporal modeling, and AI for Science. My research spans graph neural networks, physics-informed learning, and their application to large-scale physical and human systems — from biomechanical deformation to nation-scale EV charging demand. Alongside research, I've shipped production AI across three startups, most recently as Founding AI Engineer at VStdy.</p>
+        <p class="ri">▸ spatio-temporal GNNs · geometric deep learning · physics-informed learning<br>▸ LLM agents & adaptive learning · IRT · multi-agent orchestration · RAG · fine-tuning<br>▸ AI for science · biomechanics · human motion · large-scale time-series</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="n">4</span><span class="l">Publications</span></div>
+        <div class="stat"><span class="n">2</span><span class="l">Patents (1 granted)</span></div>
+        <div class="stat"><span class="n">3</span><span class="l">Startup deployments</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">02</span><h2 class="sec-title">Research</h2><span class="sec-line"></span></div>
+    <div class="papers reveal">
+      <a class="paper" href="https://ieeexplore.ieee.org/abstract/document/11348061" target="_blank" rel="noopener">
+        <span class="p-year">2026</span>
+        <span class="p-main">
+          <span class="p-title">Towards Robust Gait Identification: A Frequency-Domain Approach in Varied Surveillance Environments</span>
+          <span class="p-meta"><span class="p-venue">IEEE Access</span><span class="p-authors">L. Quagliato, Y. Song, S. Jang, E. Chung, S. Ko, S. Hwang, J. Noh, T. Lee</span></span>
+        </span>
+        <span class="p-arrow">↗</span>
+      </a>
+      <a class="paper" href="https://www.semanticscholar.org/paper/LYRICS%3A-Line-by-Line-Lyric-Generation-with-Joint-of-Ko-Kim/98ac2b0fa50f90e1635f85405bd232f2fb7479db" target="_blank" rel="noopener">
+        <span class="p-year">2025</span>
+        <span class="p-main">
+          <span class="p-title">LYRICS: Line-by-Line Lyric Generation with Joint Control of Syllables, Context, and Rhyme</span>
+          <span class="p-meta"><span class="p-venue">ICTC 2025</span><span class="p-authors">S. Hwang*, S. Ko*, H. Kim*, J. Yu, J. Kim, H. Cho, J. Noh — co-first authors</span></span>
+        </span>
+        <span class="p-arrow">↗</span>
+      </a>
+      <a class="paper" href="https://www.tandfonline.com/doi/full/10.1080/19424280.2025.2490995" target="_blank" rel="noopener">
+        <span class="p-year">2025</span>
+        <span class="p-main">
+          <span class="p-title">Enhancing Foot Deformation Prediction using Graph Neural Networks</span>
+          <span class="p-meta"><span class="p-venue">Footwear Science · Oral</span><span class="p-authors">S. Hwang, H. Yum, H. Son, T. Lee, J. Noh</span></span>
+        </span>
+        <span class="p-arrow">↗</span>
+      </a>
+      <div class="paper" style="cursor:default">
+        <span class="p-year">2025</span>
+        <span class="p-main">
+          <span class="p-title">Leveraging Graph Neural Networks for Accurate Foot Deformation Prediction</span>
+          <span class="p-meta"><span class="p-venue">ISB 2025 · Oral</span><span class="p-authors">S. Hwang, H. Yum, H. Son, T. Lee, J. Noh</span></span>
+        </span>
+        <span class="p-arrow" style="opacity:.3" title="oral, no archive">—</span></div>
+    </div>
+    <div class="patents reveal">
+      <div class="patent">
+        <div class="pt">Foot Deformation Prediction Device and Method</div>
+        <div class="pm">KR · App. 10-2025-0150087 · Pub. 2025-10-16 (P2025-0174KR)</div>
+      </div>
+      <div class="patent">
+        <div class="pt">Method and Apparatus for Generating Lyrics Considering Rhyme</div>
+        <div class="pm">KR · filed 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">03</span><h2 class="sec-title">Projects</h2><span class="sec-line"></span></div>
+    <div class="vband reveal"><canvas id="vorBand"></canvas><span class="lbl">voronoi tessellation · geometry of space</span></div>
+    <div class="proj-grid reveal">
+
+      <article class="proj">
+        <svg class="proj-shape" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#d6422b"/></svg>
+        <span class="proj-idx">P / 01</span>
+        <h3>Spatio-Temporal GNN Benchmark for National EV Charging Demand</h3>
+        <div class="org">Empact Labs · AI Research Intern</div>
+        <p>Built an 11-model STGNN suite over a 3,015-station Haversine-weighted graph; 1.7M+ status logs → 7-channel features, 168h → 48h multi-horizon forecast.</p>
+        <div class="res">▸ DCRNN MAE 6.86 kWh · 0.022 occupancy · D2STGNN 0.99 arrivals</div>
+        <div class="proj-tags"><span>PyTorch Geometric</span><span>DCRNN</span><span>STGNN</span></div>
+      </article>
+
+      <article class="proj">
+        <svg class="proj-shape" viewBox="0 0 100 100"><rect x="6" y="6" width="88" height="88" fill="#2256a8"/></svg>
+        <span class="proj-idx">P / 02</span>
+        <h3>Seven-Agent LLM Tutoring System with IRT-Style Theta Tracking</h3>
+        <div class="org">VStdy (Stealth) · Founding AI Engineer</div>
+        <p>Einstein orchestrator routing six specialist agents; per-topic theta tracking, regex self-correction, and a Scan&Solve pipeline (Mathpix → GPT-4o → TTS). Shipped SwiftUI iOS (25+ screens) + Next.js site.</p>
+        <div class="res">▸ 7-agent state machine · LangChain/LangSmith · production iOS</div>
+        <div class="proj-tags"><span>LLM Agents</span><span>LangChain</span><span>SwiftUI</span></div>
+      </article>
+
+      <article class="proj">
+        <svg class="proj-shape" viewBox="0 0 100 100"><polygon points="50,4 96,96 4,96" fill="#f0b429"/></svg>
+        <span class="proj-idx">P / 03</span>
+        <h3>Bio-Adaptive MeshGraphNet for 3D Foot Deformation</h3>
+        <div class="org">Human Performance Lab · ISB / FBS 2025 Oral</div>
+        <p>Treated the 3D foot mesh as a graph and learned a per-node displacement field as a fast surrogate for hours-long FEA — with scale preservation and a PINN-style physical loss.</p>
+        <div class="res">▸ MAE 3.90 → 0.50 · 87.2% error reduction · KR patent</div>
+        <div class="proj-tags"><span>MeshGraphNet</span><span>PINN</span><span>Biomechanics</span></div>
+      </article>
+
+      <article class="proj">
+        <svg class="proj-shape" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#2256a8"/><rect x="50" y="2" width="48" height="48" fill="#f0b429"/></svg>
+        <span class="proj-idx">P / 04</span>
+        <h3>Robust Gait Identification via Frequency-Domain Multimodal Sensing</h3>
+        <div class="org">IEEE Access 2026 · dataset & contrastive lead</div>
+        <p>Led the E-GAITS dataset (CCTV + IMU); transformed OpenPose keypoints via FFT and trained triplet-loss contrastive encoders mapping video and IMU of the same subject together.</p>
+        <div class="res">▸ Robust to clothing / lighting / occlusion · published</div>
+        <div class="proj-tags"><span>Contrastive</span><span>FFT</span><span>Multimodal</span></div>
+      </article>
+
+      <article class="proj">
+        <svg class="proj-shape" viewBox="0 0 100 100"><polygon points="2,98 98,98 98,2" fill="#d6422b"/></svg>
+        <span class="proj-idx">P / 05</span>
+        <h3>LYRICS: Controlled Line-by-Line Lyric Generation</h3>
+        <div class="org">ICTC 2025 · co-first author · patent filed</div>
+        <p>Fine-tuned LLaMA 3.1 (8B) on a syllabic-template + context format, optimized with three simultaneous objectives: syllable, context (BERT), and rhyme-score losses.</p>
+        <div class="res">▸ Controlled SFT under multiple constraints</div>
+        <div class="proj-tags"><span>LLaMA 3.1</span><span>Fine-tuning</span><span>Multi-loss</span></div>
+      </article>
+
+      <article class="proj">
+        <svg class="proj-shape" viewBox="0 0 100 100"><circle cx="35" cy="50" r="30" fill="#f0b429"/><circle cx="68" cy="50" r="22" fill="#d6422b"/></svg>
+        <span class="proj-idx">P / 06</span>
+        <h3>MeOw-LO: Zero-Shot Cat Identification for Smart Feeders</h3>
+        <div class="org">BMSMILE · Industry R&D</div>
+        <p>Reframed cat ID as metric learning — "are these two photos the same cat?" — with triplet-loss contrastive backbones (ResNet / MobileNet / ViT) benchmarked for IoT.</p>
+        <div class="res">▸ Zero-shot registration · 4–6 imgs/cat · 19-cat test set</div>
+        <div class="proj-tags"><span>Metric Learning</span><span>MobileNet</span><span>IoT</span></div>
+      </article>
+
+      <article class="proj" style="background:var(--ink);color:var(--paper)">
+        <span class="proj-idx" style="color:var(--yellow)">+ MORE</span>
+        <h3 style="max-width:100%">Sleep multimodal AI · 3D vascular reconstruction · digital-heritage 3D · Lead TA @ Upstage</h3>
+        <p style="opacity:.85">More research and engineering projects — full code, papers, and demos available on request.</p>
+        <div class="proj-tags"><span style="border-color:var(--paper)">github.com/se0ye0ng</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">Experience</h2><span class="sec-line"></span></div>
+    <div class="exp reveal">
+      <div class="exp-row">
+        <div class="exp-co">VStdy <span style="font-weight:400;opacity:.6">(Stealth)</span></div>
+        <div class="exp-role"><span class="tag">AI</span>Founding AI Engineer — 7-agent LLM tutor, iOS + web, design↔code pipeline</div>
+        <div class="exp-date">Apr 2026 — Present</div>
+      </div>
+      <div class="exp-row">
+        <div class="exp-co">Empact Labs</div>
+        <div class="exp-role"><span class="tag">AI</span>AI Research Intern — Spatio-temporal GNN benchmark for EV demand</div>
+        <div class="exp-date">Jun 2025 — Present</div>
+      </div>
+      <div class="exp-row">
+        <div class="exp-co">MathLab-AI (KAITLab)</div>
+        <div class="exp-role"><span class="tag">ML</span>AI Engineer (Contract) — IRT-based adaptive learning recommender</div>
+        <div class="exp-date">Jan 2026 — Mar 2026</div>
+      </div>
+      <div class="exp-row">
+        <div class="exp-co">Human Performance Lab</div>
+        <div class="exp-role"><span class="tag">AI</span>AI Research Intern — Physics-informed GNN for foot deformation</div>
+        <div class="exp-date">Jan 2025 — Feb 2026</div>
+      </div>
+      <div class="exp-row">
+        <div class="exp-co">KIST · BC3Lab</div>
+        <div class="exp-role"><span class="tag">CV</span>Research Intern — Ultrasound 3D vascular reconstruction (Res-UNet)</div>
+        <div class="exp-date">Dec 2022 — Jul 2023</div>
+      </div>
+      <div class="exp-row">
+        <div class="exp-co">Upstage · Boostcamp</div>
+        <div class="exp-role"><span class="tag">TA</span>Lead TA — authored "Model Optimization & Light-weighting" course</div>
+        <div class="exp-date">Aug 2024 — Jan 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2 class="sec-title">Stack</h2><span class="sec-line"></span></div>
+    <div class="stack-wrap reveal">
+      <div class="stack-col">
+        <h4>Core ML</h4>
+        <span class="chip r">PyTorch</span><span class="chip r">PyG</span><span class="chip r">GNN</span><span class="chip r">PINN</span><span class="chip r">MeshGraphNet</span>
+      </div>
+      <div class="stack-col">
+        <h4>LLM Engineering</h4>
+        <span class="chip b">LangChain</span><span class="chip b">LangSmith</span><span class="chip b">RAG</span><span class="chip b">SFT / LoRA</span><span class="chip b">Multi-agent</span>
+      </div>
+      <div class="stack-col">
+        <h4>Graph & Time-Series</h4>
+        <span class="chip y">DCRNN</span><span class="chip y">STGCN</span><span class="chip y">MTGNN</span><span class="chip y">Graph-WaveNet</span><span class="chip y">iTransformer</span>
+      </div>
+      <div class="stack-col">
+        <h4>Languages & Tools</h4>
+        <span class="chip r">Python</span><span class="chip b">Swift</span><span class="chip b">TypeScript</span><span class="chip y">MATLAB</span><span class="chip r">SQL</span><span class="chip b">Next.js</span><span class="chip y">Figma</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-bottom:0">
+  <div class="contact">
+    <div class="inner reveal">
+      <h2>with great <em>models</em><br>comes great responsibility.</h2>
+      <div class="cite">— after spider-man</div>
+      <div class="edu">M.S. AI & Software, Ewha Womans University · GPA 97.8/100 · Advisor: Prof. Junhyug Noh</div>
+      <div class="contact-links">
+        <a class="clink" href="mailto:se00@ewha.ac.kr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>email</a>
+        <a class="clink" href="https://github.com/se0ye0ng" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.5C24 5.9 18.6.5 12 .5z"/></svg>github</a>
+        <a class="clink" href="https://www.linkedin.com/in/seoyeong-hwang" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>linkedin</a>
+        <a class="clink" href="#SCHOLAR-URL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/><path d="M22 9v5"/></svg>scholar</a>
+        <a class="clink" href="SeoyeongHwang_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 13h6M9 17h4"/></svg>cv</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Seoyeong (Katrina) Hwang</footer>
+
+<script id="d3lib">// https://github.com/d3/d3-delaunay v6.0.4 Copyright 2018-2021 Observable, Inc., 2021 Mapbox
+!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?i(exports):"function"==typeof define&&define.amd?define(["exports"],i):i((t="undefined"!=typeof globalThis?globalThis:t||self).d3=t.d3||{})}(this,(function(t){"use strict";const i=134217729;function e(t,i,e,n,s){let l,h,r,o,a=i[0],c=n[0],u=0,f=0;c>a==c>-a?(l=a,a=i[++u]):(l=c,c=n[++f]);let _=0;if(u<t&&f<e)for(c>a==c>-a?(h=a+l,r=l-(h-a),a=i[++u]):(h=c+l,r=l-(h-c),c=n[++f]),l=h,0!==r&&(s[_++]=r);u<t&&f<e;)c>a==c>-a?(h=l+a,o=h-l,r=l-(h-o)+(a-o),a=i[++u]):(h=l+c,o=h-l,r=l-(h-o)+(c-o),c=n[++f]),l=h,0!==r&&(s[_++]=r);for(;u<t;)h=l+a,o=h-l,r=l-(h-o)+(a-o),a=i[++u],l=h,0!==r&&(s[_++]=r);for(;f<e;)h=l+c,o=h-l,r=l-(h-o)+(c-o),c=n[++f],l=h,0!==r&&(s[_++]=r);return 0===l&&0!==_||(s[_++]=l),_}function n(t){return new Float64Array(t)}const s=n(4),l=n(8),h=n(12),r=n(16),o=n(4);function a(t,n,a,c,u,f){const _=(n-f)*(a-u),d=(t-u)*(c-f),g=_-d;if(0===_||0===d||_>0!=d>0)return g;const y=Math.abs(_+d);return Math.abs(g)>=33306690738754716e-32*y?g:-function(t,n,a,c,u,f,_){let d,g,y,m,x,p,w,v,b,T,M,A,k,$,P,S,I,z;const F=t-u,U=a-u,K=n-f,L=c-f;$=F*L,p=i*F,w=p-(p-F),v=F-w,p=i*L,b=p-(p-L),T=L-b,P=v*T-($-w*b-v*b-w*T),S=K*U,p=i*K,w=p-(p-K),v=K-w,p=i*U,b=p-(p-U),T=U-b,I=v*T-(S-w*b-v*b-w*T),M=P-I,x=P-M,s[0]=P-(M+x)+(x-I),A=$+M,x=A-$,k=$-(A-x)+(M-x),M=k-S,x=k-M,s[1]=k-(M+x)+(x-S),z=A+M,x=z-A,s[2]=A-(z-x)+(M-x),s[3]=z;let j=function(t,i){let e=i[0];for(let n=1;n<t;n++)e+=i[n];return e}(4,s),H=22204460492503146e-32*_;if(j>=H||-j>=H)return j;if(x=t-F,d=t-(F+x)+(x-u),x=a-U,y=a-(U+x)+(x-u),x=n-K,g=n-(K+x)+(x-f),x=c-L,m=c-(L+x)+(x-f),0===d&&0===g&&0===y&&0===m)return j;if(H=11093356479670487e-47*_+33306690738754706e-32*Math.abs(j),j+=F*m+L*d-(K*y+U*g),j>=H||-j>=H)return j;$=d*L,p=i*d,w=p-(p-d),v=d-w,p=i*L,b=p-(p-L),T=L-b,P=v*T-($-w*b-v*b-w*T),S=g*U,p=i*g,w=p-(p-g),v=g-w,p=i*U,b=p-(p-U),T=U-b,I=v*T-(S-w*b-v*b-w*T),M=P-I,x=P-M,o[0]=P-(M+x)+(x-I),A=$+M,x=A-$,k=$-(A-x)+(M-x),M=k-S,x=k-M,o[1]=k-(M+x)+(x-S),z=A+M,x=z-A,o[2]=A-(z-x)+(M-x),o[3]=z;const E=e(4,s,4,o,l);$=F*m,p=i*F,w=p-(p-F),v=F-w,p=i*m,b=p-(p-m),T=m-b,P=v*T-($-w*b-v*b-w*T),S=K*y,p=i*K,w=p-(p-K),v=K-w,p=i*y,b=p-(p-y),T=y-b,I=v*T-(S-w*b-v*b-w*T),M=P-I,x=P-M,o[0]=P-(M+x)+(x-I),A=$+M,x=A-$,k=$-(A-x)+(M-x),M=k-S,x=k-M,o[1]=k-(M+x)+(x-S),z=A+M,x=z-A,o[2]=A-(z-x)+(M-x),o[3]=z;const C=e(E,l,4,o,h);$=d*m,p=i*d,w=p-(p-d),v=d-w,p=i*m,b=p-(p-m),T=m-b,P=v*T-($-w*b-v*b-w*T),S=g*y,p=i*g,w=p-(p-g),v=g-w,p=i*y,b=p-(p-y),T=y-b,I=v*T-(S-w*b-v*b-w*T),M=P-I,x=P-M,o[0]=P-(M+x)+(x-I),A=$+M,x=A-$,k=$-(A-x)+(M-x),M=k-S,x=k-M,o[1]=k-(M+x)+(x-S),z=A+M,x=z-A,o[2]=A-(z-x)+(M-x),o[3]=z;const N=e(C,h,4,o,r);return r[N-1]}(t,n,a,c,u,f,y)}const c=Math.pow(2,-52),u=new Uint32Array(512);class f{static from(t,i=x,e=p){const n=t.length,s=new Float64Array(2*n);for(let l=0;l<n;l++){const n=t[l];s[2*l]=i(n),s[2*l+1]=e(n)}return new f(s)}constructor(t){const i=t.length>>1;if(i>0&&"number"!=typeof t[0])throw new Error("Expected coords to contain numbers.");this.coords=t;const e=Math.max(2*i-5,0);this._triangles=new Uint32Array(3*e),this._halfedges=new Int32Array(3*e),this._hashSize=Math.ceil(Math.sqrt(i)),this._hullPrev=new Uint32Array(i),this._hullNext=new Uint32Array(i),this._hullTri=new Uint32Array(i),this._hullHash=new Int32Array(this._hashSize).fill(-1),this._ids=new Uint32Array(i),this._dists=new Float64Array(i),this.update()}update(){const{coords:t,_hullPrev:i,_hullNext:e,_hullTri:n,_hullHash:s}=this,l=t.length>>1;let h=1/0,r=1/0,o=-1/0,u=-1/0;for(let i=0;i<l;i++){const e=t[2*i],n=t[2*i+1];e<h&&(h=e),n<r&&(r=n),e>o&&(o=e),n>u&&(u=n),this._ids[i]=i}const f=(h+o)/2,d=(r+u)/2;let m,x,p,w=1/0;for(let i=0;i<l;i++){const e=_(f,d,t[2*i],t[2*i+1]);e<w&&(m=i,w=e)}const v=t[2*m],b=t[2*m+1];w=1/0;for(let i=0;i<l;i++){if(i===m)continue;const e=_(v,b,t[2*i],t[2*i+1]);e<w&&e>0&&(x=i,w=e)}let T=t[2*x],M=t[2*x+1],A=1/0;for(let i=0;i<l;i++){if(i===m||i===x)continue;const e=g(v,b,T,M,t[2*i],t[2*i+1]);e<A&&(p=i,A=e)}let k=t[2*p],$=t[2*p+1];if(A===1/0){for(let i=0;i<l;i++)this._dists[i]=t[2*i]-t[0]||t[2*i+1]-t[1];y(this._ids,this._dists,0,l-1);const i=new Uint32Array(l);let e=0;for(let t=0,n=-1/0;t<l;t++){const s=this._ids[t];this._dists[s]>n&&(i[e++]=s,n=this._dists[s])}return this.hull=i.subarray(0,e),this.triangles=new Uint32Array(0),void(this.halfedges=new Uint32Array(0))}if(a(v,b,T,M,k,$)<0){const t=x,i=T,e=M;x=p,T=k,M=$,p=t,k=i,$=e}const P=function(t,i,e,n,s,l){const h=e-t,r=n-i,o=s-t,a=l-i,c=h*h+r*r,u=o*o+a*a,f=.5/(h*a-r*o);return{x:t+(a*c-r*u)*f,y:i+(h*u-o*c)*f}}(v,b,T,M,k,$);this._cx=P.x,this._cy=P.y;for(let i=0;i<l;i++)this._dists[i]=_(t[2*i],t[2*i+1],P.x,P.y);y(this._ids,this._dists,0,l-1),this._hullStart=m;let S=3;e[m]=i[p]=x,e[x]=i[m]=p,e[p]=i[x]=m,n[m]=0,n[x]=1,n[p]=2,s.fill(-1),s[this._hashKey(v,b)]=m,s[this._hashKey(T,M)]=x,s[this._hashKey(k,$)]=p,this.trianglesLen=0,this._addTriangle(m,x,p,-1,-1,-1);for(let l,h,r=0;r<this._ids.length;r++){const o=this._ids[r],u=t[2*o],f=t[2*o+1];if(r>0&&Math.abs(u-l)<=c&&Math.abs(f-h)<=c)continue;if(l=u,h=f,o===m||o===x||o===p)continue;let _=0;for(let t=0,i=this._hashKey(u,f);t<this._hashSize&&(_=s[(i+t)%this._hashSize],-1===_||_===e[_]);t++);_=i[_];let d,g=_;for(;d=e[g],a(u,f,t[2*g],t[2*g+1],t[2*d],t[2*d+1])>=0;)if(g=d,g===_){g=-1;break}if(-1===g)continue;let y=this._addTriangle(g,o,e[g],-1,-1,n[g]);n[o]=this._legalize(y+2),n[g]=y,S++;let w=e[g];for(;d=e[w],a(u,f,t[2*w],t[2*w+1],t[2*d],t[2*d+1])<0;)y=this._addTriangle(w,o,d,n[o],-1,n[w]),n[o]=this._legalize(y+2),e[w]=w,S--,w=d;if(g===_)for(;d=i[g],a(u,f,t[2*d],t[2*d+1],t[2*g],t[2*g+1])<0;)y=this._addTriangle(d,o,g,-1,n[g],n[d]),this._legalize(y+2),n[d]=y,e[g]=g,S--,g=d;this._hullStart=i[o]=g,e[g]=i[w]=o,e[o]=w,s[this._hashKey(u,f)]=o,s[this._hashKey(t[2*g],t[2*g+1])]=g}this.hull=new Uint32Array(S);for(let t=0,i=this._hullStart;t<S;t++)this.hull[t]=i,i=e[i];this.triangles=this._triangles.subarray(0,this.trianglesLen),this.halfedges=this._halfedges.subarray(0,this.trianglesLen)}_hashKey(t,i){return Math.floor(function(t,i){const e=t/(Math.abs(t)+Math.abs(i));return(i>0?3-e:1+e)/4}(t-this._cx,i-this._cy)*this._hashSize)%this._hashSize}_legalize(t){const{_triangles:i,_halfedges:e,coords:n}=this;let s=0,l=0;for(;;){const h=e[t],r=t-t%3;if(l=r+(t+2)%3,-1===h){if(0===s)break;t=u[--s];continue}const o=h-h%3,a=r+(t+1)%3,c=o+(h+2)%3,f=i[l],_=i[t],g=i[a],y=i[c];if(d(n[2*f],n[2*f+1],n[2*_],n[2*_+1],n[2*g],n[2*g+1],n[2*y],n[2*y+1])){i[t]=y,i[h]=f;const n=e[c];if(-1===n){let i=this._hullStart;do{if(this._hullTri[i]===c){this._hullTri[i]=t;break}i=this._hullPrev[i]}while(i!==this._hullStart)}this._link(t,n),this._link(h,e[l]),this._link(l,c);const r=o+(h+1)%3;s<u.length&&(u[s++]=r)}else{if(0===s)break;t=u[--s]}}return l}_link(t,i){this._halfedges[t]=i,-1!==i&&(this._halfedges[i]=t)}_addTriangle(t,i,e,n,s,l){const h=this.trianglesLen;return this._triangles[h]=t,this._triangles[h+1]=i,this._triangles[h+2]=e,this._link(h,n),this._link(h+1,s),this._link(h+2,l),this.trianglesLen+=3,h}}function _(t,i,e,n){const s=t-e,l=i-n;return s*s+l*l}function d(t,i,e,n,s,l,h,r){const o=t-h,a=i-r,c=e-h,u=n-r,f=s-h,_=l-r,d=c*c+u*u,g=f*f+_*_;return o*(u*g-d*_)-a*(c*g-d*f)+(o*o+a*a)*(c*_-u*f)<0}function g(t,i,e,n,s,l){const h=e-t,r=n-i,o=s-t,a=l-i,c=h*h+r*r,u=o*o+a*a,f=.5/(h*a-r*o),_=(a*c-r*u)*f,d=(h*u-o*c)*f;return _*_+d*d}function y(t,i,e,n){if(n-e<=20)for(let s=e+1;s<=n;s++){const n=t[s],l=i[n];let h=s-1;for(;h>=e&&i[t[h]]>l;)t[h+1]=t[h--];t[h+1]=n}else{let s=e+1,l=n;m(t,e+n>>1,s),i[t[e]]>i[t[n]]&&m(t,e,n),i[t[s]]>i[t[n]]&&m(t,s,n),i[t[e]]>i[t[s]]&&m(t,e,s);const h=t[s],r=i[h];for(;;){do{s++}while(i[t[s]]<r);do{l--}while(i[t[l]]>r);if(l<s)break;m(t,s,l)}t[e+1]=t[l],t[l]=h,n-s+1>=l-e?(y(t,i,s,n),y(t,i,e,l-1)):(y(t,i,e,l-1),y(t,i,s,n))}}function m(t,i,e){const n=t[i];t[i]=t[e],t[e]=n}function x(t){return t[0]}function p(t){return t[1]}const w=1e-6;class v{constructor(){this._x0=this._y0=this._x1=this._y1=null,this._=""}moveTo(t,i){this._+=`M${this._x0=this._x1=+t},${this._y0=this._y1=+i}`}closePath(){null!==this._x1&&(this._x1=this._x0,this._y1=this._y0,this._+="Z")}lineTo(t,i){this._+=`L${this._x1=+t},${this._y1=+i}`}arc(t,i,e){const n=(t=+t)+(e=+e),s=i=+i;if(e<0)throw new Error("negative radius");null===this._x1?this._+=`M${n},${s}`:(Math.abs(this._x1-n)>w||Math.abs(this._y1-s)>w)&&(this._+="L"+n+","+s),e&&(this._+=`A${e},${e},0,1,1,${t-e},${i}A${e},${e},0,1,1,${this._x1=n},${this._y1=s}`)}rect(t,i,e,n){this._+=`M${this._x0=this._x1=+t},${this._y0=this._y1=+i}h${+e}v${+n}h${-e}Z`}value(){return this._||null}}class b{constructor(){this._=[]}moveTo(t,i){this._.push([t,i])}closePath(){this._.push(this._[0].slice())}lineTo(t,i){this._.push([t,i])}value(){return this._.length?this._:null}}class T{constructor(t,[i,e,n,s]=[0,0,960,500]){if(!((n=+n)>=(i=+i)&&(s=+s)>=(e=+e)))throw new Error("invalid bounds");this.delaunay=t,this._circumcenters=new Float64Array(2*t.points.length),this.vectors=new Float64Array(2*t.points.length),this.xmax=n,this.xmin=i,this.ymax=s,this.ymin=e,this._init()}update(){return this.delaunay.update(),this._init(),this}_init(){const{delaunay:{points:t,hull:i,triangles:e},vectors:n}=this;let s,l;const h=this.circumcenters=this._circumcenters.subarray(0,e.length/3*2);for(let n,r,o=0,a=0,c=e.length;o<c;o+=3,a+=2){const c=2*e[o],u=2*e[o+1],f=2*e[o+2],_=t[c],d=t[c+1],g=t[u],y=t[u+1],m=t[f],x=t[f+1],p=g-_,w=y-d,v=m-_,b=x-d,T=2*(p*b-w*v);if(Math.abs(T)<1e-9){if(void 0===s){s=l=0;for(const e of i)s+=t[2*e],l+=t[2*e+1];s/=i.length,l/=i.length}const e=1e9*Math.sign((s-_)*b-(l-d)*v);n=(_+m)/2-e*b,r=(d+x)/2+e*v}else{const t=1/T,i=p*p+w*w,e=v*v+b*b;n=_+(b*i-w*e)*t,r=d+(p*e-v*i)*t}h[a]=n,h[a+1]=r}let r,o,a,c=i[i.length-1],u=4*c,f=t[2*c],_=t[2*c+1];n.fill(0);for(let e=0;e<i.length;++e)c=i[e],r=u,o=f,a=_,u=4*c,f=t[2*c],_=t[2*c+1],n[r+2]=n[u]=a-_,n[r+3]=n[u+1]=f-o}render(t){const i=null==t?t=new v:void 0,{delaunay:{halfedges:e,inedges:n,hull:s},circumcenters:l,vectors:h}=this;if(s.length<=1)return null;for(let i=0,n=e.length;i<n;++i){const n=e[i];if(n<i)continue;const s=2*Math.floor(i/3),h=2*Math.floor(n/3),r=l[s],o=l[s+1],a=l[h],c=l[h+1];this._renderSegment(r,o,a,c,t)}let r,o=s[s.length-1];for(let i=0;i<s.length;++i){r=o,o=s[i];const e=2*Math.floor(n[o]/3),a=l[e],c=l[e+1],u=4*r,f=this._project(a,c,h[u+2],h[u+3]);f&&this._renderSegment(a,c,f[0],f[1],t)}return i&&i.value()}renderBounds(t){const i=null==t?t=new v:void 0;return t.rect(this.xmin,this.ymin,this.xmax-this.xmin,this.ymax-this.ymin),i&&i.value()}renderCell(t,i){const e=null==i?i=new v:void 0,n=this._clip(t);if(null===n||!n.length)return;i.moveTo(n[0],n[1]);let s=n.length;for(;n[0]===n[s-2]&&n[1]===n[s-1]&&s>1;)s-=2;for(let t=2;t<s;t+=2)n[t]===n[t-2]&&n[t+1]===n[t-1]||i.lineTo(n[t],n[t+1]);return i.closePath(),e&&e.value()}*cellPolygons(){const{delaunay:{points:t}}=this;for(let i=0,e=t.length/2;i<e;++i){const t=this.cellPolygon(i);t&&(t.index=i,yield t)}}cellPolygon(t){const i=new b;return this.renderCell(t,i),i.value()}_renderSegment(t,i,e,n,s){let l;const h=this._regioncode(t,i),r=this._regioncode(e,n);0===h&&0===r?(s.moveTo(t,i),s.lineTo(e,n)):(l=this._clipSegment(t,i,e,n,h,r))&&(s.moveTo(l[0],l[1]),s.lineTo(l[2],l[3]))}contains(t,i,e){return(i=+i)==i&&(e=+e)==e&&this.delaunay._step(t,i,e)===t}*neighbors(t){const i=this._clip(t);if(i)for(const e of this.delaunay.neighbors(t)){const t=this._clip(e);if(t)t:for(let n=0,s=i.length;n<s;n+=2)for(let l=0,h=t.length;l<h;l+=2)if(i[n]===t[l]&&i[n+1]===t[l+1]&&i[(n+2)%s]===t[(l+h-2)%h]&&i[(n+3)%s]===t[(l+h-1)%h]){yield e;break t}}}_cell(t){const{circumcenters:i,delaunay:{inedges:e,halfedges:n,triangles:s}}=this,l=e[t];if(-1===l)return null;const h=[];let r=l;do{const e=Math.floor(r/3);if(h.push(i[2*e],i[2*e+1]),r=r%3==2?r-2:r+1,s[r]!==t)break;r=n[r]}while(r!==l&&-1!==r);return h}_clip(t){if(0===t&&1===this.delaunay.hull.length)return[this.xmax,this.ymin,this.xmax,this.ymax,this.xmin,this.ymax,this.xmin,this.ymin];const i=this._cell(t);if(null===i)return null;const{vectors:e}=this,n=4*t;return this._simplify(e[n]||e[n+1]?this._clipInfinite(t,i,e[n],e[n+1],e[n+2],e[n+3]):this._clipFinite(t,i))}_clipFinite(t,i){const e=i.length;let n,s,l,h,r=null,o=i[e-2],a=i[e-1],c=this._regioncode(o,a),u=0;for(let f=0;f<e;f+=2)if(n=o,s=a,o=i[f],a=i[f+1],l=c,c=this._regioncode(o,a),0===l&&0===c)h=u,u=0,r?r.push(o,a):r=[o,a];else{let i,e,f,_,d;if(0===l){if(null===(i=this._clipSegment(n,s,o,a,l,c)))continue;[e,f,_,d]=i}else{if(null===(i=this._clipSegment(o,a,n,s,c,l)))continue;[_,d,e,f]=i,h=u,u=this._edgecode(e,f),h&&u&&this._edge(t,h,u,r,r.length),r?r.push(e,f):r=[e,f]}h=u,u=this._edgecode(_,d),h&&u&&this._edge(t,h,u,r,r.length),r?r.push(_,d):r=[_,d]}if(r)h=u,u=this._edgecode(r[0],r[1]),h&&u&&this._edge(t,h,u,r,r.length);else if(this.contains(t,(this.xmin+this.xmax)/2,(this.ymin+this.ymax)/2))return[this.xmax,this.ymin,this.xmax,this.ymax,this.xmin,this.ymax,this.xmin,this.ymin];return r}_clipSegment(t,i,e,n,s,l){const h=s<l;for(h&&([t,i,e,n,s,l]=[e,n,t,i,l,s]);;){if(0===s&&0===l)return h?[e,n,t,i]:[t,i,e,n];if(s&l)return null;let r,o,a=s||l;8&a?(r=t+(e-t)*(this.ymax-i)/(n-i),o=this.ymax):4&a?(r=t+(e-t)*(this.ymin-i)/(n-i),o=this.ymin):2&a?(o=i+(n-i)*(this.xmax-t)/(e-t),r=this.xmax):(o=i+(n-i)*(this.xmin-t)/(e-t),r=this.xmin),s?(t=r,i=o,s=this._regioncode(t,i)):(e=r,n=o,l=this._regioncode(e,n))}}_clipInfinite(t,i,e,n,s,l){let h,r=Array.from(i);if((h=this._project(r[0],r[1],e,n))&&r.unshift(h[0],h[1]),(h=this._project(r[r.length-2],r[r.length-1],s,l))&&r.push(h[0],h[1]),r=this._clipFinite(t,r))for(let i,e=0,n=r.length,s=this._edgecode(r[n-2],r[n-1]);e<n;e+=2)i=s,s=this._edgecode(r[e],r[e+1]),i&&s&&(e=this._edge(t,i,s,r,e),n=r.length);else this.contains(t,(this.xmin+this.xmax)/2,(this.ymin+this.ymax)/2)&&(r=[this.xmin,this.ymin,this.xmax,this.ymin,this.xmax,this.ymax,this.xmin,this.ymax]);return r}_edge(t,i,e,n,s){for(;i!==e;){let e,l;switch(i){case 5:i=4;continue;case 4:i=6,e=this.xmax,l=this.ymin;break;case 6:i=2;continue;case 2:i=10,e=this.xmax,l=this.ymax;break;case 10:i=8;continue;case 8:i=9,e=this.xmin,l=this.ymax;break;case 9:i=1;continue;case 1:i=5,e=this.xmin,l=this.ymin}n[s]===e&&n[s+1]===l||!this.contains(t,e,l)||(n.splice(s,0,e,l),s+=2)}return s}_project(t,i,e,n){let s,l,h,r=1/0;if(n<0){if(i<=this.ymin)return null;(s=(this.ymin-i)/n)<r&&(h=this.ymin,l=t+(r=s)*e)}else if(n>0){if(i>=this.ymax)return null;(s=(this.ymax-i)/n)<r&&(h=this.ymax,l=t+(r=s)*e)}if(e>0){if(t>=this.xmax)return null;(s=(this.xmax-t)/e)<r&&(l=this.xmax,h=i+(r=s)*n)}else if(e<0){if(t<=this.xmin)return null;(s=(this.xmin-t)/e)<r&&(l=this.xmin,h=i+(r=s)*n)}return[l,h]}_edgecode(t,i){return(t===this.xmin?1:t===this.xmax?2:0)|(i===this.ymin?4:i===this.ymax?8:0)}_regioncode(t,i){return(t<this.xmin?1:t>this.xmax?2:0)|(i<this.ymin?4:i>this.ymax?8:0)}_simplify(t){if(t&&t.length>4){for(let i=0;i<t.length;i+=2){const e=(i+2)%t.length,n=(i+4)%t.length;(t[i]===t[e]&&t[e]===t[n]||t[i+1]===t[e+1]&&t[e+1]===t[n+1])&&(t.splice(e,2),i-=2)}t.length||(t=null)}return t}}const M=2*Math.PI,A=Math.pow;function k(t){return t[0]}function $(t){return t[1]}function P(t,i,e){return[t+Math.sin(t+i)*e,i+Math.cos(t-i)*e]}class S{static from(t,i=k,e=$,n){return new S("length"in t?function(t,i,e,n){const s=t.length,l=new Float64Array(2*s);for(let h=0;h<s;++h){const s=t[h];l[2*h]=i.call(n,s,h,t),l[2*h+1]=e.call(n,s,h,t)}return l}(t,i,e,n):Float64Array.from(function*(t,i,e,n){let s=0;for(const l of t)yield i.call(n,l,s,t),yield e.call(n,l,s,t),++s}(t,i,e,n)))}constructor(t){this._delaunator=new f(t),this.inedges=new Int32Array(t.length/2),this._hullIndex=new Int32Array(t.length/2),this.points=this._delaunator.coords,this._init()}update(){return this._delaunator.update(),this._init(),this}_init(){const t=this._delaunator,i=this.points;if(t.hull&&t.hull.length>2&&function(t){const{triangles:i,coords:e}=t;for(let t=0;t<i.length;t+=3){const n=2*i[t],s=2*i[t+1],l=2*i[t+2];if((e[l]-e[n])*(e[s+1]-e[n+1])-(e[s]-e[n])*(e[l+1]-e[n+1])>1e-10)return!1}return!0}(t)){this.collinear=Int32Array.from({length:i.length/2},((t,i)=>i)).sort(((t,e)=>i[2*t]-i[2*e]||i[2*t+1]-i[2*e+1]));const t=this.collinear[0],e=this.collinear[this.collinear.length-1],n=[i[2*t],i[2*t+1],i[2*e],i[2*e+1]],s=1e-8*Math.hypot(n[3]-n[1],n[2]-n[0]);for(let t=0,e=i.length/2;t<e;++t){const e=P(i[2*t],i[2*t+1],s);i[2*t]=e[0],i[2*t+1]=e[1]}this._delaunator=new f(i)}else delete this.collinear;const e=this.halfedges=this._delaunator.halfedges,n=this.hull=this._delaunator.hull,s=this.triangles=this._delaunator.triangles,l=this.inedges.fill(-1),h=this._hullIndex.fill(-1);for(let t=0,i=e.length;t<i;++t){const i=s[t%3==2?t-2:t+1];-1!==e[t]&&-1!==l[i]||(l[i]=t)}for(let t=0,i=n.length;t<i;++t)h[n[t]]=t;n.length<=2&&n.length>0&&(this.triangles=new Int32Array(3).fill(-1),this.halfedges=new Int32Array(3).fill(-1),this.triangles[0]=n[0],l[n[0]]=1,2===n.length&&(l[n[1]]=0,this.triangles[1]=n[1],this.triangles[2]=n[1]))}voronoi(t){return new T(this,t)}*neighbors(t){const{inedges:i,hull:e,_hullIndex:n,halfedges:s,triangles:l,collinear:h}=this;if(h){const i=h.indexOf(t);return i>0&&(yield h[i-1]),void(i<h.length-1&&(yield h[i+1]))}const r=i[t];if(-1===r)return;let o=r,a=-1;do{if(yield a=l[o],o=o%3==2?o-2:o+1,l[o]!==t)return;if(o=s[o],-1===o){const i=e[(n[t]+1)%e.length];return void(i!==a&&(yield i))}}while(o!==r)}find(t,i,e=0){if((t=+t)!=t||(i=+i)!=i)return-1;const n=e;let s;for(;(s=this._step(e,t,i))>=0&&s!==e&&s!==n;)e=s;return s}_step(t,i,e){const{inedges:n,hull:s,_hullIndex:l,halfedges:h,triangles:r,points:o}=this;if(-1===n[t]||!o.length)return(t+1)%(o.length>>1);let a=t,c=A(i-o[2*t],2)+A(e-o[2*t+1],2);const u=n[t];let f=u;do{let n=r[f];const u=A(i-o[2*n],2)+A(e-o[2*n+1],2);if(u<c&&(c=u,a=n),f=f%3==2?f-2:f+1,r[f]!==t)break;if(f=h[f],-1===f){if(f=s[(l[t]+1)%s.length],f!==n&&A(i-o[2*f],2)+A(e-o[2*f+1],2)<c)return f;break}}while(f!==u);return a}render(t){const i=null==t?t=new v:void 0,{points:e,halfedges:n,triangles:s}=this;for(let i=0,l=n.length;i<l;++i){const l=n[i];if(l<i)continue;const h=2*s[i],r=2*s[l];t.moveTo(e[h],e[h+1]),t.lineTo(e[r],e[r+1])}return this.renderHull(t),i&&i.value()}renderPoints(t,i){void 0!==i||t&&"function"==typeof t.moveTo||(i=t,t=null),i=null==i?2:+i;const e=null==t?t=new v:void 0,{points:n}=this;for(let e=0,s=n.length;e<s;e+=2){const s=n[e],l=n[e+1];t.moveTo(s+i,l),t.arc(s,l,i,0,M)}return e&&e.value()}renderHull(t){const i=null==t?t=new v:void 0,{hull:e,points:n}=this,s=2*e[0],l=e.length;t.moveTo(n[s],n[s+1]);for(let i=1;i<l;++i){const s=2*e[i];t.lineTo(n[s],n[s+1])}return t.closePath(),i&&i.value()}hullPolygon(){const t=new b;return this.renderHull(t),t.value()}renderTriangle(t,i){const e=null==i?i=new v:void 0,{points:n,triangles:s}=this,l=2*s[t*=3],h=2*s[t+1],r=2*s[t+2];return i.moveTo(n[l],n[l+1]),i.lineTo(n[h],n[h+1]),i.lineTo(n[r],n[r+1]),i.closePath(),e&&e.value()}*trianglePolygons(){const{triangles:t}=this;for(let i=0,e=t.length/3;i<e;++i)yield this.trianglePolygon(i)}trianglePolygon(t){const i=new b;return this.renderTriangle(t,i),i.value()}}t.Delaunay=S,t.Voronoi=T,Object.defineProperty(t,"__esModule",{value:!0})}));
+</script>
+<script>
+/* mobile nav */
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+/* scroll reveal */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== HERO CARD — EGNO (equivariant graph neural operator, dynamics rollout) ===== */
+(function(){
+const cv=document.getElementById('gnnCard');if(!cv)return;const ctx=cv.getContext('2d');
+const PAL=['#d6422b','#2256a8','#f0b429'];let dpr=Math.min(window.devicePixelRatio||1,2),W,H,R,F,cx,cy;
+let ay=0.3,ax=-0.3,dragging=false,lx=0,ly=0,base=[],dir=[],ph=[],edges=[],hist=[],N=14,t0=performance.now();
+function size(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);R=Math.min(W,H)*0.26;F=R*4;cx=W/2;cy=H/2;}
+function dist(a,b){return Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z);}
+function build(){base=[];dir=[];ph=[];edges=[];hist=[];const g=Math.PI*(3-Math.sqrt(5));
+ for(let i=0;i<N;i++){const yy=1-(i/(N-1))*2,rr=Math.sqrt(Math.max(0,1-yy*yy)),th=g*i;
+  base.push({x:Math.cos(th)*rr*R,y:yy*R,z:Math.sin(th)*rr*R});
+  const a=Math.random()*Math.PI*2,b=Math.random()*Math.PI-Math.PI/2;dir.push({x:Math.cos(b)*Math.cos(a),y:Math.sin(b),z:Math.cos(b)*Math.sin(a)});
+  ph.push(Math.random()*Math.PI*2);hist.push([]);}
+ for(let i=0;i<N;i++){const ds=[];for(let j=0;j<N;j++)if(j!==i)ds.push([dist(base[i],base[j]),j]);ds.sort((a,b)=>a[0]-b[0]);for(let k=0;k<2;k++){const j=ds[k][1],a=Math.min(i,j),b=Math.max(i,j);if(!edges.some(e=>e.a===a&&e.b===b))edges.push({a,b});}}}
+function pos(i,t){const A=R*0.34,w=1.1,s=Math.sin(w*t+ph[i]);return{x:base[i].x+dir[i].x*A*s,y:base[i].y+dir[i].y*A*s,z:base[i].z+dir[i].z*A*s};}
+function vel(i,t){const A=R*0.34,w=1.1,c=Math.cos(w*t+ph[i]);return{x:dir[i].x*A*w*c,y:dir[i].y*A*w*c,z:dir[i].z*A*w*c};}
+function proj(p){const cY=Math.cos(ay),sY=Math.sin(ay);let x=p.x*cY+p.z*sY,z=-p.x*sY+p.z*cY,y=p.y;const cX=Math.cos(ax),sX=Math.sin(ax);let y2=y*cX-z*sX,z2=y*sX+z*cX;const s=F/(F+z2);return{sx:cx+x*s,sy:cy+y2*s,s:s,z:z2};}
+function rel(e){const r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
+cv.addEventListener('mousedown',e=>{const p=rel(e);dragging=true;lx=p.x;ly=p.y;});
+cv.addEventListener('mousemove',e=>{const p=rel(e);if(dragging){ay+=(p.x-lx)*0.01;ax+=(p.y-ly)*0.008;ax=Math.max(-1.2,Math.min(1.2,ax));lx=p.x;ly=p.y;cv.style.cursor='grabbing';}else cv.style.cursor='grab';});
+window.addEventListener('mouseup',()=>{dragging=false;});
+function arrow(b,t){const ang=Math.atan2(t.sy-b.sy,t.sx-b.sx),hl=6*((b.s+t.s)/2);ctx.beginPath();ctx.moveTo(b.sx,b.sy);ctx.lineTo(t.sx,t.sy);ctx.stroke();ctx.beginPath();ctx.moveTo(t.sx,t.sy);ctx.lineTo(t.sx-hl*Math.cos(ang-0.4),t.sy-hl*Math.sin(ang-0.4));ctx.moveTo(t.sx,t.sy);ctx.lineTo(t.sx-hl*Math.cos(ang+0.4),t.sy-hl*Math.sin(ang+0.4));ctx.stroke();}
+function draw(){const t=(performance.now()-t0)/1000;if(!dragging)ay+=0.004;ctx.clearRect(0,0,W,H);
+ const cur=[];for(let i=0;i<N;i++){const p=pos(i,t);cur.push(p);hist[i].push(p);if(hist[i].length>16)hist[i].shift();}
+ for(let i=0;i<N;i++){const Hh=hist[i];ctx.strokeStyle=PAL[i%3];ctx.lineWidth=2;for(let k=1;k<Hh.length;k++){const a=proj(Hh[k-1]),b=proj(Hh[k]);ctx.globalAlpha=k/Hh.length*0.45;ctx.beginPath();ctx.moveTo(a.sx,a.sy);ctx.lineTo(b.sx,b.sy);ctx.stroke();}}
+ ctx.globalAlpha=1;
+ ctx.strokeStyle='#16140f';ctx.lineWidth=1.6;edges.forEach(e=>{const a=proj(cur[e.a]),b=proj(cur[e.b]);ctx.beginPath();ctx.moveTo(a.sx,a.sy);ctx.lineTo(b.sx,b.sy);ctx.stroke();});
+ const P=cur.map(proj),ord=P.map((q,i)=>i).sort((i,j)=>P[j].z-P[i].z);
+ ord.forEach(i=>{const v=vel(i,t),q=P[i],tip=proj({x:cur[i].x+v.x*0.5,y:cur[i].y+v.y*0.5,z:cur[i].z+v.z*0.5});
+  ctx.strokeStyle='#d6422b';ctx.lineWidth=2;arrow(q,tip);
+  ctx.fillStyle=PAL[i%3];ctx.beginPath();ctx.arc(q.sx,q.sy,8*q.s,0,Math.PI*2);ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='#16140f';ctx.stroke();});
+ requestAnimationFrame(draw);}
+window.addEventListener('resize',()=>{size();build();});
+size();build();requestAnimationFrame(draw);
+})();
+
+/* ===== PROJECTS BAND — Voronoi tessellation ===== */
+(function(){
+const cv=document.getElementById('vorBand');if(!cv)return;const ctx=cv.getContext('2d');
+const COL=['#d6422b','#2256a8','#f0b429','#f3efe4','#d6422b','#2256a8','#f0b429'];
+let dpr=Math.min(window.devicePixelRatio||1,2),W,H,pts=[],mx=-1e4,my=-1e4;
+function size(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+function build(){pts=[];const n=Math.max(12,Math.round(W/70));for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-0.5)*0.5,vy:(Math.random()-0.5)*0.5,c:COL[i%COL.length]});}
+cv.addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;});
+cv.addEventListener('mouseleave',()=>{mx=-1e4;my=-1e4;});
+function frame(){
+ if(!(window.d3&&d3.Delaunay)){return requestAnimationFrame(frame);}
+ ctx.fillStyle='#16140f';ctx.fillRect(0,0,W,H);
+ for(let i=0;i<pts.length;i++){const p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<2||p.x>W-2)p.vx*=-1;if(p.y<2||p.y>H-2)p.vy*=-1;p.x=Math.max(2,Math.min(W-2,p.x));p.y=Math.max(2,Math.min(H-2,p.y));}
+ const arr=pts.map(p=>[p.x,p.y]);const hasM=mx>0;if(hasM)arr.push([mx,my]);
+ const del=d3.Delaunay.from(arr);const v=del.voronoi([0,0,W,H]);
+ for(let i=0;i<arr.length;i++){const poly=v.cellPolygon(i);if(!poly)continue;ctx.beginPath();ctx.moveTo(poly[0][0],poly[0][1]);for(let j=1;j<poly.length;j++)ctx.lineTo(poly[j][0],poly[j][1]);ctx.closePath();
+  ctx.fillStyle=(hasM&&i===arr.length-1)?'#f3efe4':pts[i].c;ctx.fill();ctx.strokeStyle='#16140f';ctx.lineWidth=2;ctx.stroke();}
+ requestAnimationFrame(frame);}
+window.addEventListener('resize',()=>{size();build();});
+size();build();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
