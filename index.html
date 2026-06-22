@@ -21,6 +21,8 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--paper);color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--yellow);color:var(--ink)}
 a{color:inherit;text-decoration:none}
+.colink{border-bottom:1.5px solid var(--red);transition:background .15s,color .15s;white-space:nowrap}
+.colink:hover{background:var(--red);color:var(--paper)}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1}
@@ -237,7 +239,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
         <p class="lead">I build AI that can make sense of complex, real world systems and predict how they behave.</p>
         <p>I'm a master's researcher in AI at Ewha Womans University, where I focus on geometric deep learning, spatio-temporal modeling, and AI for Science.</p>
         <p>My research covers graph neural networks and physics-informed learning, and I apply them to large physical and human systems, from biomechanical deformation all the way to nation scale EV charging demand.</p>
-        <p>Beyond research, I've shipped production AI at three startups, most recently as the founding AI engineer at VStdy.</p>
+        <p>Beyond research, I've shipped production AI at three startups, most recently as the founding AI engineer at <a class="colink" href="https://vstdy.com" target="_blank" rel="noopener">VStdy ↗</a>.</p>
         <p class="ri">▸ spatio-temporal GNNs · geometric deep learning · physics-informed learning<br>▸ LLM agents & adaptive learning · IRT · multi-agent orchestration · RAG · fine-tuning<br>▸ AI for science · biomechanics · human motion · large-scale time-series</p>
       </div>
       <div class="about-stats">
@@ -320,7 +322,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
         <svg class="proj-shape" viewBox="0 0 100 100"><rect x="6" y="6" width="88" height="88" fill="#2256a8"/></svg>
         <span class="proj-idx">P / 02</span>
         <h3>Seven-Agent LLM Tutoring System with IRT-Style Theta Tracking</h3>
-        <div class="org">VStdy (Stealth) · Founding AI Engineer</div>
+        <div class="org"><a class="colink" href="https://vstdy.com" target="_blank" rel="noopener">VStdy ↗</a> (Stealth) · Founding AI Engineer</div>
         <p>Einstein orchestrator routing six specialist agents; per-topic theta tracking, regex self-correction, and a Scan&Solve pipeline (Mathpix → GPT-4o → TTS). Shipped SwiftUI iOS (25+ screens) + Next.js site.</p>
         <div class="res">▸ 7-agent state machine · LangChain/LangSmith · production iOS</div>
         <div class="proj-tags"><span>LLM Agents</span><span>LangChain</span><span>SwiftUI</span></div>
@@ -383,7 +385,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
     <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">Experience</h2><span class="sec-line"></span></div>
     <div class="exp reveal">
       <div class="exp-row">
-        <div class="exp-co">VStdy <span style="font-weight:400;opacity:.6">(Stealth)</span></div>
+        <div class="exp-co"><a class="colink" href="https://vstdy.com" target="_blank" rel="noopener">VStdy ↗</a> <span style="font-weight:400;opacity:.6">(Stealth)</span></div>
         <div class="exp-role"><span class="tag">AI</span>Founding AI Engineer. 7-agent LLM tutor, iOS and web, design to code pipeline.</div>
         <div class="exp-date">Apr 2026 to Present</div>
       </div>
