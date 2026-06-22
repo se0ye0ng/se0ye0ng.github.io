@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seoyeong Hwang — AI Engineer / Researcher</title>
-<meta name="description" content="Seoyeong (Katrina) Hwang — AI Engineer & Researcher. Geometric deep learning, spatio-temporal GNNs, LLM agents, and AI for Science.">
+<title>Seoyeong Hwang · AI Engineer & Researcher</title>
+<meta name="description" content="Seoyeong (Katrina) Hwang. AI Engineer and Researcher. Geometric deep learning, spatio-temporal GNNs, LLM agents, and AI for Science.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -184,6 +184,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
   .contact{padding:64px 0}
   .paper{padding:18px 6px}
 }
+@media(max-width:900px){.scroll-hint{display:none}}
 </style>
 </head>
 <body>
@@ -207,7 +208,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
       <div>
         <span class="hero-tag"><span class="dot"></span>AI Engineer · Researcher · Seoul, KR</span>
         <h1 class="hero-title"><span class="l1">seoyeong</span><br><span class="l2">hwang</span></h1>
-        <p class="hero-sub"><b>Geometric deep learning</b>, spatio-temporal modeling, and <b>AI for Science</b> — building models that represent the world as graphs and sequences, and shipping them as production systems.</p>
+        <p class="hero-sub">I work on <b>geometric deep learning</b>, spatio-temporal modeling, and <b>AI for Science</b>. I build models that see the world as graphs and sequences, then ship them as real production systems.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#projects">View work →</a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -233,10 +234,10 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
     <div class="sec-head reveal"><span class="sec-num">01</span><h2 class="sec-title">About</h2><span class="sec-line"></span></div>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p class="lead">Bridging physics, signals, and intelligence — building AI that understands and predicts complex real-world systems.</p>
-        <p>I'm a master's researcher in AI at Ewha Womans University, specializing in geometric deep learning, spatio-temporal modeling, and AI for Science.</p>
-        <p>My research spans graph neural networks, physics-informed learning, and their application to large-scale physical and human systems — from biomechanical deformation to nation-scale EV charging demand.</p>
-        <p>Alongside research, I've shipped production AI across three startups, most recently as Founding AI Engineer at VStdy.</p>
+        <p class="lead">I build AI that can make sense of complex, real world systems and predict how they behave.</p>
+        <p>I'm a master's researcher in AI at Ewha Womans University, where I focus on geometric deep learning, spatio-temporal modeling, and AI for Science.</p>
+        <p>My research covers graph neural networks and physics-informed learning, and I apply them to large physical and human systems, from biomechanical deformation all the way to nation scale EV charging demand.</p>
+        <p>Beyond research, I've shipped production AI at three startups, most recently as the founding AI engineer at VStdy.</p>
         <p class="ri">▸ spatio-temporal GNNs · geometric deep learning · physics-informed learning<br>▸ LLM agents & adaptive learning · IRT · multi-agent orchestration · RAG · fine-tuning<br>▸ AI for science · biomechanics · human motion · large-scale time-series</p>
       </div>
       <div class="about-stats">
@@ -265,7 +266,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
         <span class="p-year">2025</span>
         <span class="p-main">
           <span class="p-title">LYRICS: Line-by-Line Lyric Generation with Joint Control of Syllables, Context, and Rhyme</span>
-          <span class="p-meta"><span class="p-venue">ICTC 2025</span><span class="p-authors">S. Hwang*, S. Ko*, H. Kim*, J. Yu, J. Kim, H. Cho, J. Noh — co-first authors</span></span>
+          <span class="p-meta"><span class="p-venue">ICTC 2025</span><span class="p-authors">S. Hwang*, S. Ko*, H. Kim*, J. Yu, J. Kim, H. Cho, J. Noh (co-first authors)</span></span>
         </span>
         <span class="p-arrow">↗</span>
       </a>
@@ -283,7 +284,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
           <span class="p-title">Leveraging Graph Neural Networks for Accurate Foot Deformation Prediction</span>
           <span class="p-meta"><span class="p-venue">ISB 2025 · Oral</span><span class="p-authors">S. Hwang, H. Yum, H. Son, T. Lee, J. Noh</span></span>
         </span>
-        <span class="p-arrow" style="opacity:.3" title="oral, no archive">—</span></div>
+        <span class="p-arrow" style="opacity:.3" title="oral presentation, no public archive">·</span></div>
     </div>
     <div class="patents reveal">
       <div class="patent">
@@ -330,7 +331,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
         <span class="proj-idx">P / 03</span>
         <h3>Bio-Adaptive MeshGraphNet for 3D Foot Deformation</h3>
         <div class="org">Human Performance Lab · ISB / FBS 2025 Oral</div>
-        <p>Treated the 3D foot mesh as a graph and learned a per-node displacement field as a fast surrogate for hours-long FEA — with scale preservation and a PINN-style physical loss.</p>
+        <p>Treated the 3D foot mesh as a graph and learned a per-node displacement field that works as a fast surrogate for the hours long FEA solver, using scale preservation and a PINN-style physical loss.</p>
         <div class="res">▸ MAE 3.90 → 0.50 · 87.2% error reduction · KR patent</div>
         <div class="proj-tags"><span>MeshGraphNet</span><span>PINN</span><span>Biomechanics</span></div>
       </article>
@@ -360,15 +361,15 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
         <span class="proj-idx">P / 06</span>
         <h3>MeOw-LO: Zero-Shot Cat Identification for Smart Feeders</h3>
         <div class="org">BMSMILE · Industry R&D</div>
-        <p>Reframed cat ID as metric learning — "are these two photos the same cat?" — with triplet-loss contrastive backbones (ResNet / MobileNet / ViT) benchmarked for IoT.</p>
-        <div class="res">▸ Zero-shot registration · 4–6 imgs/cat · 19-cat test set</div>
+        <p>Reframed cat ID as a metric learning question, basically "are these two photos the same cat?", using triplet-loss contrastive backbones (ResNet, MobileNet, ViT) benchmarked for IoT.</p>
+        <div class="res">▸ Zero-shot registration · 4 to 6 images per cat · 19-cat test set</div>
         <div class="proj-tags"><span>Metric Learning</span><span>MobileNet</span><span>IoT</span></div>
       </article>
 
       <article class="proj" style="background:var(--ink);color:var(--paper)">
         <span class="proj-idx" style="color:var(--yellow)">+ MORE</span>
         <h3 style="max-width:100%">Sleep multimodal AI · 3D vascular reconstruction · digital-heritage 3D · Lead TA @ Upstage</h3>
-        <p style="opacity:.85">More research and engineering projects — full code, papers, and demos available on request.</p>
+        <p style="opacity:.85">More research and engineering projects. Full code, papers, and demos available on request.</p>
         <div class="proj-tags"><span style="border-color:var(--paper)">github.com/se0ye0ng</span></div>
       </article>
 
@@ -383,33 +384,33 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
     <div class="exp reveal">
       <div class="exp-row">
         <div class="exp-co">VStdy <span style="font-weight:400;opacity:.6">(Stealth)</span></div>
-        <div class="exp-role"><span class="tag">AI</span>Founding AI Engineer — 7-agent LLM tutor, iOS + web, design↔code pipeline</div>
-        <div class="exp-date">Apr 2026 — Present</div>
+        <div class="exp-role"><span class="tag">AI</span>Founding AI Engineer. 7-agent LLM tutor, iOS and web, design to code pipeline.</div>
+        <div class="exp-date">Apr 2026 to Present</div>
       </div>
       <div class="exp-row">
         <div class="exp-co">Empact Labs</div>
-        <div class="exp-role"><span class="tag">AI</span>AI Research Intern — Spatio-temporal GNN benchmark for EV demand</div>
-        <div class="exp-date">Jun 2025 — Present</div>
+        <div class="exp-role"><span class="tag">AI</span>AI Research Intern. Spatio-temporal GNN benchmark for EV demand.</div>
+        <div class="exp-date">Jun 2025 to Present</div>
       </div>
       <div class="exp-row">
         <div class="exp-co">MathLab-AI (KAITLab)</div>
-        <div class="exp-role"><span class="tag">ML</span>AI Engineer (Contract) — IRT-based adaptive learning recommender</div>
-        <div class="exp-date">Jan 2026 — Mar 2026</div>
+        <div class="exp-role"><span class="tag">ML</span>AI Engineer (Contract). IRT-based adaptive learning recommender.</div>
+        <div class="exp-date">Jan 2026 to Mar 2026</div>
       </div>
       <div class="exp-row">
         <div class="exp-co">Human Performance Lab</div>
-        <div class="exp-role"><span class="tag">AI</span>AI Research Intern — Physics-informed GNN for foot deformation</div>
-        <div class="exp-date">Jan 2025 — Feb 2026</div>
+        <div class="exp-role"><span class="tag">AI</span>AI Research Intern. Physics-informed GNN for foot deformation.</div>
+        <div class="exp-date">Jan 2025 to Feb 2026</div>
       </div>
       <div class="exp-row">
         <div class="exp-co">KIST · BC3Lab</div>
-        <div class="exp-role"><span class="tag">CV</span>Research Intern — Ultrasound 3D vascular reconstruction (Res-UNet)</div>
-        <div class="exp-date">Dec 2022 — Jul 2023</div>
+        <div class="exp-role"><span class="tag">CV</span>Research Intern. Ultrasound 3D vascular reconstruction with Res-UNet.</div>
+        <div class="exp-date">Dec 2022 to Jul 2023</div>
       </div>
       <div class="exp-row">
         <div class="exp-co">Upstage · Boostcamp</div>
-        <div class="exp-role"><span class="tag">TA</span>Lead TA — authored "Model Optimization & Light-weighting" course</div>
-        <div class="exp-date">Aug 2024 — Jan 2025</div>
+        <div class="exp-role"><span class="tag">TA</span>Lead TA. Authored the Model Optimization and Light-weighting course.</div>
+        <div class="exp-date">Aug 2024 to Jan 2025</div>
       </div>
     </div>
   </div>
@@ -445,7 +446,7 @@ footer{position:relative;z-index:1;padding:26px;text-align:center;font-family:'J
   <div class="contact">
     <div class="inner reveal">
       <h2>with great <em>models</em><br>comes great responsibility.</h2>
-      <div class="cite">— after spider-man</div>
+      <div class="cite">after spider-man</div>
       <div class="edu">M.S. AI & Software, Ewha Womans University · GPA 97.8/100 · Advisor: Prof. Junhyug Noh</div>
       <div class="contact-links">
         <a class="clink" href="mailto:se00@ewha.ac.kr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>email</a>
